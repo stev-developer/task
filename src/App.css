@@ -1,38 +1,92 @@
-.App {
+.app-container {
+  padding: 20px;
+}
+
+.header {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.applicant-tabs {
+  grid-column: span 2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.applicant-row {
   display: flex;
-  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.applicant-tab {
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+}
+
+.applicant-tab.active {
+  background-color: #e6f7ff;
+  border-color: #1890ff;
+}
+
+.sidebar {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  height: 100vh;
+}
+
+.document-tab {
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+.document-tab.active {
+  background-color: #e6f7ff;
+  border-color: #1890ff;
+}
+
+.content-area {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+}
+
+.upload-section {
+  margin-bottom: 20px;
+}
+
+.image-preview {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.image-preview-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navigation-buttons {
+  margin-top: 20px;
+}
+
+.navigation-buttons .ant-btn {
+  margin: 0 10px;
 }
