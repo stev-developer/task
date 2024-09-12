@@ -27,9 +27,10 @@ const App = () => {
 
   // Add new applicant
   const addApplicant = () => {
+    const randomNumber = Math.floor(Math.random() * 1000); 
     const newApplicant = {
       id: uuidv4(), // Generate unique ID
-      name: `Applicant ${applicants.length + 1}`,
+      name: `Applicant ${randomNumber}`,
       documents: [
         {
           id: uuidv4(), // Generate unique ID
@@ -233,8 +234,7 @@ const App = () => {
         {/* Content Area */}
         <div className="content-area">
           <h3>
-            {applicants[activeApplicant]?.name} - Document{" "}
-            {applicants[activeApplicant]?.documents[activeDocument]?.name}
+            {applicants[activeApplicant]?.name} - Document {activeDocument + 1}
           </h3>
 
           <div className="upload-section">
